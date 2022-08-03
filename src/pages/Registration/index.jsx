@@ -111,7 +111,7 @@ export const Registration = () => {
             <Button variant="contained" color="error" onClick={onClickRemoveImage}>
               Удалить
             </Button>
-            <img className={styles.image} src={`http://localhost:4444${imageUrl}`} alt="Uploaded" width='300' height='200'/>
+            <img className={styles.image} src={`${process.env.REACT_APP_API_URL}${imageUrl}`} alt="Uploaded" width='300' height='200'/>
           </>
         )}
         <br />

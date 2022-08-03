@@ -32,7 +32,7 @@ export const CommentsBlock = ({ items, children, isLoading }) => {
                 {isLoading ? (
                   <Skeleton variant="circular" width={40} height={40} />
                 ) : (
-                  <Avatar alt={obj.author.fullName} src={`http://localhost:4444${obj.author.avatarUrl}`} />
+                  <Avatar alt={obj.author.fullName} src={`${process.env.REACT_APP_API_URL}${obj.author.avatarUrl}`} />
                 )}
               </ListItemAvatar>
               {isLoading ? (
